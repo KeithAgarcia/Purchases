@@ -17,7 +17,7 @@ public class Purchase {
     String date;
 
     @Column(nullable = false)
-    int credit_card;
+    String credit_card;
 
     @Column(nullable = false)
     int cvv;
@@ -31,7 +31,7 @@ public class Purchase {
     public Purchase() {
     }
 
-    public Purchase(String date, int credit_card, int cvv, String category, Customer customer) {
+    public Purchase(String date, String credit_card, int cvv, String category, Customer customer) {
         this.date = date;
         this.credit_card = credit_card;
         this.cvv = cvv;

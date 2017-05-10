@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+<a href="/">All</a>
+<a href="/?category=Furniture">Furniture</a>
+<a href="/?category=Alcohol">Alcohol</a>
+<a href="/?genre=Toiletries">Toiletries</a>
+<a href="/?genre=Shoes">Shoes</a>
+<a href="/?category=Food">Food</a>
+<a href="/?category=Jewelry">Jewelry</a>
+<br> <BR>
+<ol>
+    {{#purchases}}
+    <li>{{customer.name}} {{customer.email}} {{category}} {{credit_card}} {{cvv}} {{date}} </li>
+    {{/purchases}}
+</ol>
 </body>
 </html>
