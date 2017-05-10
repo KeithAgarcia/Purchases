@@ -1,8 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+<!--table {-->
+    <!--font-family: arial, sans-serif;-->
+    <!--border-collapse: collapse;-->
+    <!--width: 100%;-->
+<!--}-->
+
+<!--td, th {-->
+    <!--border: 1px solid #dddddd;-->
+    <!--text-align: left;-->
+    <!--padding: 8px;-->
+<!--}-->
+
+<!--tr:nth-child(even) {-->
+    <!--background-color: #dddddd;-->
+<!--}-->
+</style>
 </head>
 <body>
 <a href="/">All</a>
@@ -14,9 +28,24 @@
 <a href="/?category=Jewelry">Jewelry</a>
 <br> <BR>
 <ol>
+    <table>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Category</th>
+    <th>Credit Card</th>
+    <th>CVV</th>
+    <th>Date</th>
     {{#purchases}}
-    <li>{{customer.name}} {{customer.email}} {{category}} {{credit_card}} {{cvv}} {{date}} </li>
-    {{/purchases}}
+        <tr>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{category}}</td>
+            <td>{{credit_card}}</td>
+            <td>{{cvv}}</td>
+            <td>{{date}}</td>
+        </tr>
+        {{/purchases}}
+    </table>
 </ol>
 </body>
 </html>
